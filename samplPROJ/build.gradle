@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        maven {url 'https://oss.jfrog.org/oss-snapshot-local/'}
+        jcenter()
+    }
+    dependencies {
+        classpath "com.roku:henka:1.0.0-SNAPSHOT"
+    }
+}
+
+task terraform(type: com.roku.henka.TerraformTask) {
+    description "Runs a terraform script"
+    tfDir       = "."
+    tfAction    = "apply -input=false -auto-approve"
+    tfInitParams = "-input=false"
+
+    terraformBaseDir = "/Users/key/prog/terraform"
+    terraformVersion = "0.11.1"
+}
