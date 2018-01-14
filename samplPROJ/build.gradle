@@ -8,10 +8,31 @@ buildscript {
     }
 }
 
-task terraform(type: com.roku.henka.TerraformTask) {
+task terraformPlan (type: com.roku.henka.TerraformTask) {
+    description "Runs a terraform script"
+    tfDir       = "."
+    tfAction    = "plan -input=false"
+    tfInitParams = "-input=false"
+
+    terraformBaseDir = "/Users/key/prog/terraform"
+    terraformVersion = "0.11.1"
+}
+
+
+task terraformApply (type: com.roku.henka.TerraformTask) {
     description "Runs a terraform script"
     tfDir       = "."
     tfAction    = "apply -input=false -auto-approve"
+    tfInitParams = "-input=false"
+
+    terraformBaseDir = "/Users/key/prog/terraform"
+    terraformVersion = "0.11.1"
+}
+
+task terraformRefresh (type: com.roku.henka.TerraformTask) {
+    description "Runs a terraform script"
+    tfDir       = "."
+    tfAction    = "refresh -input=false"
     tfInitParams = "-input=false"
 
     terraformBaseDir = "/Users/key/prog/terraform"
