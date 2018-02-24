@@ -15,7 +15,7 @@ task terraformPlan (type: com.roku.henka.TerraformTask) {
     tfInitParams = "-input=false"
 
     terraformBaseDir = "/Users/key/prog/terraform"
-    terraformVersion = "0.11.1"
+    terraformVersion = "0.11.3"
 }
 
 
@@ -26,7 +26,7 @@ task terraformApply (type: com.roku.henka.TerraformTask) {
     tfInitParams = "-input=false"
 
     terraformBaseDir = "/Users/key/prog/terraform"
-    terraformVersion = "0.11.1"
+    terraformVersion = "0.11.3"
 }
 
 task terraformRefresh (type: com.roku.henka.TerraformTask) {
@@ -36,5 +36,5 @@ task terraformRefresh (type: com.roku.henka.TerraformTask) {
     tfInitParams = "-input=false"
 
     terraformBaseDir = "/Users/key/prog/terraform"
-    terraformVersion = "0.11.1"
+    terraformVersion = "0.11.3"
 }
